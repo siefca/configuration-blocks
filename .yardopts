@@ -1,0 +1,12 @@
+--title 'Easy way of adding configuration blocks to classes, modules and applications'
+--protected
+--readme README.md
+--no-private
+--hide-void-return
+-p docs/yard-tpl
+-t default
+-
+docs/HISTORY
+ChangeLog
+docs/COPYING
+docs/LGPL-LICENSE
