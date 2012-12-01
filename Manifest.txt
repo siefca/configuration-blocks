@@ -5,6 +5,7 @@ LGPL-LICENSE
 Manifest.txt
 README.md
 Rakefile
+configuration-blocks.gemspec
 docs/COPYING
 docs/HISTORY
 docs/LEGAL
@@ -12,8 +13,6 @@ docs/LGPL-LICENSE
 docs/TODO
 docs/rdoc.css
 docs/yard-tpl/default/fulldoc/html/css/common.css
-configuration-blocks.gemspec
 lib/configuration-blocks.rb
 lib/configuration-blocks/core.rb
 lib/configuration-blocks/version.rb
-lib/skel/locale.yml
