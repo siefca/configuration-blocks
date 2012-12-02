@@ -11,12 +11,12 @@ Configuration blocks for classes, modules and applications
 Summary
 -------
 
-This is simple module for creating configuration blocks in objects
-(modules, classes and their instances).
+This is simple module that helps in creating configuration blocks in objects.
 
-It lets to create separated, anonymous modules containing delegators.
-Those delegators are used to set or get some configuration data through
-delegates (methods that exist in your class or module).
+It separates configuration blocks from a class containing configuration methods
+by creating anonymous modules containing delegators. Those delegators are used
+to set or get some configuration data through delegates (methods that exist in your
+class or module).
 
 Example
 -------
@@ -28,10 +28,9 @@ Instance-level:
     include ConfigurationBlocks
 
     def some_setting(arg)
-      "setting to #{arg}"
+      p "setting to #{arg}"
     end
     configuration_method :some_setting
-
   end
 
   obj = SomeClass.new
@@ -49,11 +48,10 @@ Class-level:
 
     class <<self
       def some_setting(arg)
-        "setting to #{arg}"
+        p "setting to #{arg}"
       end
       configuration_method :some_setting
     end
-
   end
 
   SomeClass.configuration_block do
@@ -61,9 +59,60 @@ Class-level:
   end
 ```
 
-One-place:
+Imported from modules:
 
+```ruby
+  module MyModule
+    include ConfigurationBlocks
+  
+    def some_setting(arg)
+      p "setting to #{arg}"
+    end
+    configuration_method :some_setting
+  end
+  
+  module SecondModule
+    include ConfigurationBlocks
+    include MyModule
+  
+    def other(v)
+      p "setting other to #{v}"
+    end
+    configuration_method :other
+  end
+  
+  class SomeClass
+    include ConfigurationBlocks
+    include SecondModule
+  end
+  
+  SomeClass.new.configuration_block do
+    some_setting  :some_value
+    other         :other
+  end
+```
 
+Note that configuration blocks called without arguments have are evaluaten within a module
+that persists. You can store and retrieve instance variables, create module-level methods and so on:
+
+```ruby
+  class SomeClass
+    include ConfigurationBlocks
+  end
+
+  obj = SomeClass.new
+  
+  obj.configuration_block do
+    @some_var = 8
+  end
+
+  obj.configuration_block do
+    p @some_var
+  end
+```
+
+If you pass at least one argument to the configuration block, then the module will be passed as a first argument
+and the context will remain as it is.
 
 See also
 --------
