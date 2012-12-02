@@ -6,7 +6,7 @@
 # 
 # This file contains version information.
 
-class ConfigurationBlocks
+module ConfigurationBlocks
   # @private
   DEVELOPER   = 'Paweł Wilk'
   # @private

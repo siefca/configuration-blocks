@@ -92,8 +92,9 @@ Imported from modules:
   end
 ```
 
-Note that configuration blocks called without arguments have are evaluaten within a module
-that persists. You can store and retrieve instance variables, create module-level methods and so on:
+Please note that configuration blocks called **without arguments** are evaluated in the context of a module
+and that module persists between calls. You can store and retrieve instance variables, create
+module-level methods and so on:
 
 ```ruby
   class SomeClass
@@ -111,8 +112,8 @@ that persists. You can store and retrieve instance variables, create module-leve
   end
 ```
 
-If you pass at least one argument to the configuration block, then the module will be passed as a first argument
-and the context will remain as it is.
+If you pass **at least one argument** to a configuration block, then the module will be passed as a first argument
+of the block and the context will remain as it is (current). Imagine using +tap+.
 
 See also
 --------

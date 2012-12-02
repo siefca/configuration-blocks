@@ -57,8 +57,6 @@ module ConfigurationBlocks
     self.class.send(:configuration_block_core, @cb_conf_module, &block)
   end
 
-  private
-
   # This module contains methods that will extend the class.
   module ClassMethods
 
@@ -102,7 +100,7 @@ module ConfigurationBlocks
     # Gets all method names known to configuration engine.
     # 
     # @param local_only [Boolean] optional flag that if set, causes only methods added
-    #  by current class or module to be listed. (defaults to +false+)
+    #  by current class or module to be listed.
     # 
     # @return [Array<Symbol>] delegated method names
     def get_configuration_methods(local_only = false)
