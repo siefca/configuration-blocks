@@ -2,16 +2,16 @@
 
 Gem::Specification.new do |s|
   s.name = "configuration-blocks"
-  s.version = "1.0.0.20121201214825"
+  s.version = "1.0.0.20121202030054"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Pawe\u{142} Wilk"]
   s.cert_chain = ["/Users/siefca/.gem/gem-public_cert.pem"]
-  s.date = "2012-12-01"
+  s.date = "2012-12-02"
   s.description = "Easy way of adding configuration blocks to classes, modules and applications."
   s.email = ["pw@gnu.org"]
   s.extra_rdoc_files = ["Manifest.txt"]
-  s.files = [".rspec", ".yardopts", "ChangeLog", "LGPL-LICENSE", "Manifest.txt", "README.md", "Rakefile", "docs/COPYING", "docs/HISTORY", "docs/LEGAL", "docs/LGPL-LICENSE", "docs/TODO", "docs/rdoc.css", "docs/yard-tpl/default/fulldoc/html/css/common.css", "configuration-blocks.gemspec", "init.rb", "lib/configuration-blocks.rb", "lib/configuration-blocks/backends.rb", "lib/configuration-blocks/ConfigurationBlocks.rb", "lib/configuration-blocks/core.rb", "lib/configuration-blocks/debug.rb", "lib/configuration-blocks/fallbacks.rb", "lib/configuration-blocks/integration.rb", "lib/configuration-blocks/locales.rb", "lib/configuration-blocks/patches.rb", "lib/configuration-blocks/paths.rb", "lib/configuration-blocks/railtie.rb", "lib/configuration-blocks/resolver.rb", "lib/configuration-blocks/settings.rb", "lib/configuration-blocks/version.rb", "lib/skel/locale.yml"]
+  s.files = [".rspec", ".yardopts", "ChangeLog", "LGPL-LICENSE", "Manifest.txt", "README.md", "Rakefile", "configuration-blocks.gemspec", "docs/COPYING", "docs/HISTORY", "docs/LEGAL", "docs/LGPL-LICENSE", "docs/TODO", "docs/rdoc.css", "docs/yard-tpl/default/fulldoc/html/css/common.css", "lib/configuration-blocks.rb", "lib/configuration-blocks/core.rb", "lib/configuration-blocks/version.rb"]
   s.homepage = "https://rubygems.org/gems/configuration-blocks/"
   s.rdoc_options = ["--title", "Configuration::Blocks Documentation", "--quiet"]
   s.require_paths = ["lib"]
